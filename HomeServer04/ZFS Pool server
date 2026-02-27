@@ -1,1 +1,19 @@
+Der Plan für den Homeserver 4 
 
+Hardware: 8GB Ram 6 TB HDD 
+
+
+Ziel: Der Server soll Storage für das Cluster breitstellen (HS01, HS02, HS03) und Back-Ups/Snapshots erstellen und Verwalten 
+
+Umsetzung: 
+-Homeserver mit True Nas installieren 
+-RAIDZ1 
+-Speicher pool erstellen 
+-Speichert Pooll über NFS bereitstellen 
+-Backup Routine erstellen 
+
+Dokumentation 
+
+Homeserver mit TrueNAS installieren
+-ISO heruntergeladen 
+-Bootbaren USB-Stick mit Fedora Media Writer erstellt 
