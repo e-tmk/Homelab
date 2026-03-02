@@ -17,3 +17,24 @@ Dokumentation
 Homeserver mit TrueNAS installieren
 -ISO heruntergeladen 
 -Bootbaren USB-Stick mit Fedora Media Writer erstellt 
+-TrueNAS installiert 
+
+Pool erstellen
+-erst einrichtung ging selbsterklärend über die Web-Gui 
+-Speicherpool erstellt 
+-Raid eingerichtet
+-NFS Ordner für bestimmte Clients festgelegt
+
+NFS-Pool in proxmox eihängen
+-Über Nodes->Storage versucht den NFS share einzubinden, es kam ein Permission error
+-gewechselt zu TrueNas und den NFS share angepasst  Mapall User: root , Mapall Group: whell , allow non-root users to mount: yes
+und die Berechtigungen unter Dataset>Ordner Owner: root, Group: wheel, Apply permissions recursively: yes 
+-NFS neugestartet
+-Anschließend konnte ich den NFS share einhängen :)
+
+
+
+
+
+Anmerkung: NFS einrichtung, geteilter Ordner bekommt die IP Adressen von HS01,02,03 erstmal nicht fürs gesammte Netz
+  Evt. benötigt er diesen aber. Ich gehe aber davon aus das Proxmox die Ordner so durchreicht das die VMs den lokal sehen können. 
