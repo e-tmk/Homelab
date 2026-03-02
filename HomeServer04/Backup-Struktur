@@ -1,0 +1,21 @@
+
+Ziel: Daten sollen falls Hardware beschädigt ist Systeme ausfallen oder falsch konfiguriert wurden wiederhergestellt werden können 
+
+Plan: 
+
+Snapshot übernimmt TrueNAS selber 
+  -Stündlich und Täglich (Retentation alle 2 Tage, Retentation alle 30 Tage)
+  -Vorteile bei TrueNAS, sehr schnell, konsistentm, platzsparend, effizient, Performance wird ausgelagert  
+  -Nachteile wenn Proxmox diese augabe übernimmt: firert VMs ein, erstellt interne QUEMU-Snapshots, erzeugt zusätzliche Delta Dateien 
+  +erweiterte Replication auf externe HDD
+
+VM-Backups übermimmt Proxmox
+  -Proxmox macht Backups nutz dafür aber den NFS Pool von TrueNAS sodass die Backups 
+  auf einem anderen System gespeichert sind 
+  -Vorteile bei Proxmox: enthält konfig + Disk 
+  -Nachteil wenn TrueNAS backup vom gesamten Pool erstellt: keine VM kann gezielt wiederhergestellt werden, VM konfiguration fehlt, nicht flexibel 
+
+Umsetzung: 
+To Do: 
+-eigenen Ordner im TrueNAS erstellen wo Proxmox seine Backups abspeicher kann 
+...
