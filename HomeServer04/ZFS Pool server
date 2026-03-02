@@ -33,8 +33,10 @@ und die Berechtigungen unter Dataset>Ordner Owner: root, Group: wheel, Apply per
 -Anschließend konnte ich den NFS share einhängen :)
 
 
-
-
+ToDo : ->Ordner Struktur in TrueNAS- richtige DataSets erstellen 1.vmdata 2.backup 3.Iso 
+      ->Überlegen ob TrueNas backup von allen Datein erstellt oder Proxmox Backups  erstellt und diese in TrueNAS speoichert 
+      -->Backup struktur in neuen File festlegen 
 
 Anmerkung: NFS einrichtung, geteilter Ordner bekommt die IP Adressen von HS01,02,03 erstmal nicht fürs gesammte Netz
-  Evt. benötigt er diesen aber. Ich gehe aber davon aus das Proxmox die Ordner so durchreicht das die VMs den lokal sehen können. 
+  Evt. benötigt er diesen aber. Ich gehe aber davon aus das Proxmox die Ordner so durchreicht das die VMs den lokal sehen können.Update : ich habe nun auch das Netz angegeben, Nun können ausgewählte
+Host in diesem Netz auf den Pool zugreifen 
